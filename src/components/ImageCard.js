@@ -18,6 +18,7 @@ export default class ImageCard extends Component {
     this.imageRef.current.addEventListener('load', this.setSpans)
   }
   render() {
+    // adding a commment here to test dropbox sync
     const {
       props: {
         urls: { regular },
