@@ -18,7 +18,7 @@ const App = () => {
   return (
     <div className="ui container" style={{ marginTop: '10px' }}>
       <SearchBar onSearchSubmit={onSearchSubmit} />
-      <ImageList images={images} />
+      {images.length > 0 && <ImageList images={images} />}
     </div>
   )
 }
