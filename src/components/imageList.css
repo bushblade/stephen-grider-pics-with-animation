@@ -1,11 +1,24 @@
 .image-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  grid-gap: 0 10px;
-  justify-items: center;
-  grid-auto-rows: 1px;
+  column-count: 1;
+}
+@media (min-width: 800px) {
+  .image-list {
+    column-count: 2;
+  }
+}
+
+@media (min-width: 1000px) {
+  .image-list {
+    column-count: 3;
+  }
+}
+
+@media (min-width: 1200px) {
+  .image-list {
+    column-count: 4;
+  }
 }
 
 .image-list img {
-  width: 250px;
+  width: 100%;
 }
