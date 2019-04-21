@@ -6,16 +6,6 @@ const ImageCard = props => {
   const [loaded, setLoaded] = useState(false)
   const imageRef = createRef()
 
-  const spring = useSpring({
-    opacity: loaded ? 1 : 0,
-    transform: `scale(${loaded ? 1 : 0})`,
-    from: {
-      opacity: 0,
-      transform: `scale(0)`
-    },
-    config: config.stiff
-  })
-
   const setSpans = () => {
     const height = imageRef.current.clientHeight
     const spans = Math.ceil(height + 10)
@@ -28,7 +18,7 @@ const ImageCard = props => {
   }, [])
 
   return (
-    <animated.div style={{ gridRowEnd: `span ${spans}`, ...spring }}>
+    <animated.div style={{ gridRowEnd: `span ${spans}`, ...props.styles }}>
       <img ref={imageRef} src={props.urls.regular} alt={props.description} />
     </animated.div>
   )
