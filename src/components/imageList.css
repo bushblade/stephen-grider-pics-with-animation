@@ -1,5 +1,6 @@
 .image-list {
   column-count: 1;
+  column-gap: 0px;
 }
 @media (min-width: 800px) {
   .image-list {
