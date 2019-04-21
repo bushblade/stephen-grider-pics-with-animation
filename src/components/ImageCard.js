@@ -1,5 +1,5 @@
 import React, { useState, useEffect, createRef } from 'react'
-import { animated, useSpring, config } from 'react-spring'
+import { animated } from 'react-spring'
 
 const ImageCard = props => {
   const [spans, set] = useState(0)
