@@ -8,9 +8,9 @@ export default class ImageCard extends Component {
   }
 
   setSpans = () => {
+    console.log(this.imageRef.current.clientHeight)
     const height = this.imageRef.current.clientHeight
     const spans = Math.ceil(height + 10)
-
     this.setState({ spans })
   }
 
@@ -18,7 +18,6 @@ export default class ImageCard extends Component {
     this.imageRef.current.addEventListener('load', this.setSpans)
   }
   render() {
-    // adding a commment here to test dropbox sync
     const {
       props: {
         urls: { regular },
