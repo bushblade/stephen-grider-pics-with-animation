@@ -8,6 +8,7 @@ const App = () => {
   const [images, setImages] = useState([])
 
   const onSearchSubmit = async term => {
+    setImages([])
     const res = await unsplash.get(`/search/photos`, {
       params: { query: term }
     })

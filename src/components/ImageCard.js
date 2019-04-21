@@ -3,14 +3,12 @@ import { animated, useSpring, config } from 'react-spring'
 
 const ImageCard = props => {
   const [spans, set] = useState(0)
-  const [loaded, setLoaded] = useState(false)
   const imageRef = createRef()
 
   const setSpans = () => {
     const height = imageRef.current.clientHeight
     const spans = Math.ceil(height + 10)
     set(spans)
-    setLoaded(true)
   }
 
   useEffect(() => {
